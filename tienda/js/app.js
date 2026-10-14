@@ -1,3 +1,5 @@
+import { inicializarCarrito } from "./carrito.js";
+
 async function loadComponent(containerId, filePath) {
     const container = document.getElementById(containerId);
 
@@ -30,14 +32,15 @@ async function initializeApp() {
         './components/footer.html'
     );
 
-
-
+    
 
 
     await loadComponent(
-        'panel-lateral-carrito',
-        './carrito/index.html'
+        "panel-lateral-carrito",
+        "./carrito/index.html"
     );
+    
+    inicializarCarrito();
 }
 
 initializeApp();
