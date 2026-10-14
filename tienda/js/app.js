@@ -1,6 +1,6 @@
 import { inicializarCarrito } from "./carrito.js";
 import { enviarFormulario } from './contact.js';
-
+import {activarNavegacion} from  './header.js';
 async function loadComponent(containerId, filePath) {
     const container = document.getElementById(containerId);
 
@@ -28,6 +28,7 @@ async function initializeApp() {
         './components/header.html'
     );
 
+    activarNavegacion();
     await loadComponent('contact-container',
         './contactos/index.html'
     );
