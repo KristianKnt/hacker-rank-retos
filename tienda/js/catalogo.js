@@ -1,4 +1,5 @@
 import { productos } from "../services/apiService.js";
+import { agregarProducto } from "./carrito.js";
 
 // Variable global para almacenar la lista completa de productos
 let todosLosProductos = [];
@@ -17,6 +18,7 @@ export async function iniciarCatalogo() {
     todosLosProductos = await productos();
 
     renderizarProductos(todosLosProductos.slice(0, 10));
+    inicializarBotonesAgregar(contenedor);
 
     // inicializamos los filtros de los botonoes
     inicializarFiltros();
@@ -39,7 +41,11 @@ function renderizarProductos(lista) {
     card.innerHTML = `
       <div class="producto-imagen">
         <img src="${producto.image}" alt="${producto.title}">
-        <button class="producto-agregar" type="button" title="Agregar al carrito">
+        <button
+          class="producto-agregar"
+          type="button"
+          title="Agregar al carrito"
+          data-producto-id="${producto.id}">
           <i class="bi bi-cart-plus"></i>
         </button>
       </div>
@@ -51,6 +57,25 @@ function renderizarProductos(lista) {
     `;
 
     contenedor.appendChild(card);
+  });
+}
+
+function inicializarBotonesAgregar(contenedor) {
+  contenedor.addEventListener("click", (evento) => {
+    const boton = evento.target.closest(".producto-agregar");
+
+    if (!boton) {
+      return;
+    }
+
+    const id = Number(boton.dataset.productoId);
+    const producto = todosLosProductos.find(
+      (item) => item.id === id
+    );
+
+    if (producto) {
+      agregarProducto(producto);
+    }
   });
 }
 
