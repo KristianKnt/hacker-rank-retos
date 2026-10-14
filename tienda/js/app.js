@@ -42,6 +42,11 @@ async function initializeApp() {
         "./carrito/index.html"
     );
 
+     await loadComponent(
+        "div-quienes",
+        "./quienes-somos/quienes-somos.html"
+    );
+
     inicializarCarrito();
     enviarFormulario()
 }

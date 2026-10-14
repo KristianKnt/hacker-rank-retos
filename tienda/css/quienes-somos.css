@@ -33,10 +33,10 @@ body {
     background: linear-gradient(209deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }*/
 
-body {
+/*body {
     background-color: black;
 }
-
+*/
 #titulo-quienes {
     color: #E45134;
 }
@@ -47,10 +47,12 @@ body {
 }
 
 #div-quienes {
+    display: flex;
+    background-color: black;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 500px;
+    height: 600px;
 }
 
 #moda-quienes {
