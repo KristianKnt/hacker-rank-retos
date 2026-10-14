@@ -29,6 +29,15 @@ async function initializeApp() {
         'footer-container',
         './components/footer.html'
     );
+
+
+
+
+
+    await loadComponent(
+        'panel-lateral-carrito',
+        './carrito/index.html'
+    );
 }
 
 initializeApp();
