@@ -75,6 +75,9 @@ tienda/
 ├── index.html                      
 ├── catalogo/
 │   └── index.html                  
+├── components/
+│   └── footer.html                  
+│   └── header.html
 ├── quienes-somos/
 │   └── index.html                 
 ├── contactanos/
