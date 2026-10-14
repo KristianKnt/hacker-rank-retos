@@ -1,3 +1,4 @@
+import { inicializarCarrito } from "./carrito.js";
 import { enviarFormulario } from './contact.js';
 
 async function loadComponent(containerId, filePath) {
@@ -27,7 +28,7 @@ async function initializeApp() {
         './components/header.html'
     );
 
-    await loadComponent('contact-container', 
+    await loadComponent('contact-container',
         './contactos/index.html'
     );
 
@@ -35,6 +36,13 @@ async function initializeApp() {
         'footer-container',
         './components/footer.html'
     );
+
+    await loadComponent(
+        "panel-lateral-carrito",
+        "./carrito/index.html"
+    );
+
+    inicializarCarrito();
     enviarFormulario()
 }
 

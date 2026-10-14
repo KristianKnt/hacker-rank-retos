@@ -1,0 +1,207 @@
+
+/* =================================
+   FONDO OSCURO DEL CARRITO
+================================= */
+
+#panel-lateral-carrito .backdrop-carrito {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.48);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1040;
+}
+
+
+/* =================================
+   PANEL LATERAL
+================================= */
+
+#panel-lateral-carrito .panel-carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: min(420px, 90vw);
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f4f0e8;
+    color: #191816;
+
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+
+    transform: translateX(100%);
+    visibility: hidden;
+
+    transition:
+        transform 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 1050;
+}
+
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+#panel-lateral-carrito .cabecera-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    padding: 22px 26px 16px;
+    border-bottom: 1px solid #ded8cd;
+    flex-shrink: 0;
+}
+
+#panel-lateral-carrito #titulo-carrito {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#panel-lateral-carrito #subtitulo-carrito {
+    margin: 5px 0 0;
+    color: #827d75;
+    font-size: 12px;
+}
+
+#panel-lateral-carrito #boton-cerrar-carrito {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    border: 1px solid #d5cec3;
+    border-radius: 50%;
+    background: transparent;
+    color: #191816;
+
+    font-size: 23px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+/* =================================
+   LISTA DE PRODUCTOS
+================================= */
+
+#panel-lateral-carrito .cuerpo-carrito {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+
+    padding: 20px 26px;
+}
+
+
+/* =================================
+   PIE Y TOTAL
+================================= */
+
+#panel-lateral-carrito .pie-carrito {
+    flex-shrink: 0;
+
+    padding: 20px 26px;
+    background-color: #ebe6dc;
+    border-top: 1px solid #d8d1c6;
+}
+
+#panel-lateral-carrito .resumen-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+#panel-lateral-carrito .resumen-carrito span {
+    color: #827d75;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#panel-lateral-carrito #precio-total-carrito {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+#panel-lateral-carrito .boton-pagar {
+    width: 100%;
+    padding: 14px 18px;
+
+    border: none;
+    border-radius: 28px;
+
+    background-color: #ed4d32;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#panel-lateral-carrito .boton-pagar:hover {
+    background-color: #d93d25;
+}
+
+
+/* =================================
+   ESTADO ABIERTO
+================================= */
+
+#panel-lateral-carrito.abierto .backdrop-carrito {
+    opacity: 1;
+    visibility: visible;
+}
+
+#panel-lateral-carrito.abierto .panel-carrito {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+
+/* =================================
+   ACCESIBILIDAD Y MÓVILES
+================================= */
+
+#panel-lateral-carrito button:focus-visible {
+    outline: 2px solid #ed4d32;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    #panel-lateral-carrito .panel-carrito {
+        width: 90vw;
+    }
+
+    #panel-lateral-carrito .cabecera-carrito {
+        padding: 20px 18px 15px;
+    }
+
+    #panel-lateral-carrito .cuerpo-carrito {
+        padding: 18px;
+    }
+
+    #panel-lateral-carrito .pie-carrito {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #panel-lateral-carrito .panel-carrito,
+    #panel-lateral-carrito .backdrop-carrito {
+        transition: none;
+    }
+}
