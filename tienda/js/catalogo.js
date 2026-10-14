@@ -60,10 +60,10 @@ function inicializarFiltros() {
 
   botonesFiltro.forEach((boton) => {
     boton.addEventListener("click", (e) => {
-      // Quitar la clase 'activo' de todos los botones y ponerla en el presionado
-      botonesFiltro.funcionalidad = botonesFiltro.forEach((b) =>
-        b.classList.remove("activo"),
-      );
+      // Recorre los botones para quitar la clase 'activo'
+      botonesFiltro.forEach((b) => b.classList.remove("activo"));
+
+      // Al botón que le dimos clic, le agregamos la clase 'activo'
       e.target.classList.add("activo");
 
       // Obtener la categoría del atributo data-categoria
