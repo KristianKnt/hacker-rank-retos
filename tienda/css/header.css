@@ -54,3 +54,14 @@
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

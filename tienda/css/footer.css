@@ -28,3 +28,9 @@
     border-top: 1px solid #444;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
