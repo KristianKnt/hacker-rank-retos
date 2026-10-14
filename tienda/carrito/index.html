@@ -1,0 +1,36 @@
+<div class="backdrop-carrito" id="backdrop-carrito"></div>
+
+<aside id="panel-carrito"
+       class="panel-carrito"
+       aria-labelledby="titulo-carrito"
+       aria-hidden="true">
+
+    <div class="cabecera-carrito">
+        <div>
+            <h2 id="titulo-carrito">Tu selección</h2>
+            <p id="subtitulo-carrito">0 productos</p>
+        </div>
+
+        <button type="button"
+                id="boton-cerrar-carrito"
+                aria-label="Cerrar carrito">
+            ×
+        </button>
+    </div>
+
+    <div id="cuerpo-carrito" class="cuerpo-carrito">
+        <!-- Aquí se renderizarán los productos -->
+    </div>
+
+    <div id="pie-carrito" class="pie-carrito">
+        <div class="resumen-carrito">
+            <span>Total</span>
+            <strong id="precio-total-carrito">$0.00</strong>
+        </div>
+
+        <button type="button" class="boton-pagar">
+            Proceder al pago →
+        </button>
+    </div>
+
+</aside>

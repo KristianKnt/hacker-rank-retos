@@ -1,5 +1,6 @@
-import { enviarFormulario } from "./contact.js";
 import { iniciarCatalogo } from "./catalogo.js";
+import { inicializarCarrito } from "./carrito.js";
+import { enviarFormulario } from './contact.js';
 
 async function loadComponent(containerId, filePath) {
   const container = document.getElementById(containerId);
@@ -22,16 +23,37 @@ async function loadComponent(containerId, filePath) {
 }
 
 async function initializeApp() {
-  await loadComponent("header-container", "./components/header.html");
 
-  await loadComponent("contact-container", "./contactos/index.html");
+  await loadComponent(
+    'header-container',
+    './components/header.html'
+  );
 
-  await loadComponent("catalogo-container", "./catalogo/catalogo.html");
+  await loadComponent('contact-container',
+    './contactos/index.html'
+  );
+  await loadComponent(
+    "catalogo-container",
+    "./catalogo/catalogo.html");
 
-  await loadComponent("footer-container", "./components/footer.html");
+  await loadComponent(
+    'footer-container',
+    './components/footer.html'
+  );
+
+  await loadComponent(
+    "panel-lateral-carrito",
+    "./carrito/index.html"
+  );
+
+  await loadComponent(
+    "div-quienes",
+    "./quienes-somos/quienes-somos.html"
+  );
 
   iniciarCatalogo();
-  enviarFormulario();
+  inicializarCarrito();
+  enviarFormulario()
 }
 
 initializeApp();
