@@ -23,21 +23,17 @@
   justify-content: space-between;
   align-items: end;
   gap: 30px;
-
   padding-bottom: 24px;
   margin-bottom: 28px;
-
   border-bottom: 1px solid #e7e4de;
 }
 
 .catalogo-subtitulo {
   display: block;
   margin-bottom: 12px;
-
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;
-
   color: #c76a4c;
 }
 
@@ -52,7 +48,6 @@
 .catalogo-descripcion {
   max-width: 320px;
   margin: 0;
-
   font-size: 13px;
   line-height: 1.7;
   color: #77736f;
@@ -62,24 +57,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
   margin-bottom: 32px;
 }
 
 .catalogo .filtro {
   padding: 9px 18px;
-
   border: 1px solid #dedbd5;
   border-radius: 30px;
-
   background-color: transparent;
   color: #44403c;
-
   font-family: inherit;
   font-size: 12px;
-
   cursor: pointer;
-
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
@@ -98,18 +87,11 @@
   border-color: #292724;
 }
 
-.catalogo .filtro:focus-visible {
-  outline: 2px solid #c76a4c;
-  outline-offset: 3px;
-}
-
 /* Cuadricula de los productos */
 
 .catalogo-productos {
   display: grid;
-
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
   gap: 32px 20px;
 }
 
@@ -123,16 +105,12 @@
 
 .catalogo .producto-imagen {
   position: relative;
-
   width: 100%;
   aspect-ratio: 3 / 4;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 25px;
-
   background-color: #eeece8;
   overflow: hidden;
 }
@@ -140,9 +118,7 @@
 .catalogo .producto-imagen img {
   width: 100%;
   height: 100%;
-
   object-fit: contain;
-
   transition: transform 0.3s ease;
 }
 
@@ -167,71 +143,56 @@
 
 .catalogo .producto-titulo {
   margin: 0;
-
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
-
   color: #292724;
 }
 
 .catalogo .producto-precio {
   margin: 0;
-
   font-size: 14px;
   font-weight: 600;
-
   color: #292724;
 }
 
 /* Boton de agregar al carrito */
 
 .catalogo .producto-agregar {
-  width: 100%;
-
-  padding: 11px 14px;
-  margin-top: 8px;
-
-  border: 1px solid #292724;
-  border-radius: 4px;
-
-  background-color: transparent;
-  color: #292724;
-
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #292724;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
+  z-index: 2;
+}
+
+.catalogo .producto-card:hover .producto-agregar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .catalogo .producto-agregar:hover {
-  background-color: #292724;
+  background-color: #c76a4c;
   color: #ffffff;
-}
-
-.catalogo .producto-agregar:focus-visible {
-  outline: 2px solid #c76a4c;
-  outline-offset: 3px;
-}
-
-/* Mensaje del catalago */
-
-#mensaje-catalogo {
-  margin: 24px 0 0;
-
-  font-size: 13px;
-  text-align: center;
-
-  color: #77736f;
-}
-
-#mensaje-catalogo:empty {
-  display: none;
 }
 
 /* Celulares */

@@ -30,7 +30,7 @@ async function initializeApp() {
 
   await loadComponent("footer-container", "./components/footer.html");
 
-  await iniciarCatalogo();
+  iniciarCatalogo();
   enviarFormulario();
 }
 

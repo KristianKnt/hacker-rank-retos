@@ -8,11 +8,14 @@ export async function iniciarCatalogo() {
     return;
   }
   try {
+    contenedor.innerHTML = "<p>Cargando productos...</p>";
     const listaProductos = await productos();
 
     const primerosDiez = listaProductos.slice(0, 10);
 
     console.log("Productos del catálogo:", primerosDiez);
+
+    contenedor.innerHTML = "";
 
     primerosDiez.forEach((producto) => {
       const card = document.createElement("div");
@@ -20,15 +23,17 @@ export async function iniciarCatalogo() {
 
       card.innerHTML = `
         <div class="producto-imagen">
-          <img src="${producto.image}" alt="${producto.title}">
+            <img src="${producto.image}" alt="${producto.title}">
+            <button class="producto-agregar" type="button" title="Agregar al carrito">
+                <i class="bi bi-cart-plus"></i>
+            </button>
         </div>
         <div class="producto-info">
-          <span class="producto-categoria">${producto.category}</span>
-          <h3 class="producto-titulo">${producto.title}</h3>
-          <p class="producto-precio">$${producto.price}</p>
-          <button class="producto-agregar" type="button">Agregar al carrito</button>
-        </div>
-      `;
+            <span class="producto-categoria">${producto.category}</span>
+            <h3 class="producto-titulo" title="${producto.title}">${producto.title}</h3>
+            <p class="producto-precio">$${producto.price}</p>
+            </div>
+        `;
 
       contenedor.appendChild(card);
     });
