@@ -1,0 +1,86 @@
+/* FUENTE TEXTOS */
+
+.antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* FUENTE TITULOS */
+
+.kalam-light {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* COLOR DE FONDO 
+
+body {
+    background: #000000;
+    background: linear-gradient(209deg, rgba(0, 0, 0, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}*/
+
+body {
+    background-color: black;
+}
+
+#titulo-quienes {
+    color: #E45134;
+}
+
+#encabezado-quienes,
+#parrafo-quienes {
+    color: white;
+}
+
+#div-quienes {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+}
+
+#moda-quienes {
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    justify-content: center;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#div-naranja {
+    background-color: #E45134;
+    min-height: 200px;
+    min-width: 200px;
+    position:absolute;
+    margin-left: 200px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#veinte {
+    color: white;
+    justify-content: flex-start;
+}
+
+#interior-naranja {
+    color: white;
+}
