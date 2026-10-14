@@ -1,7 +1,7 @@
 :root {
   --color-accent: #E45134;
   --color-bg-light: #F4F0E8;
-  --color-panel-light: #EBE6DC;
+  --color-panel-light: #F9F6EF;
   --color-panel-dark: #DED9CE;
   --color-dark: #171713;
   
@@ -28,6 +28,7 @@
   width: 100%;
   max-width: 1050px;
   min-height: 550px;
+  margin: 50px 0;
   border: 1px solid rgba(23, 23, 19, 0.1);
 }
 
