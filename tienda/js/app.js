@@ -1,4 +1,5 @@
 import { enviarFormulario } from "./contact.js";
+import { iniciarCatalogo } from "./catalogo.js";
 
 async function loadComponent(containerId, filePath) {
   const container = document.getElementById(containerId);
@@ -28,6 +29,8 @@ async function initializeApp() {
   await loadComponent("catalogo-container", "./catalogo/catalogo.html");
 
   await loadComponent("footer-container", "./components/footer.html");
+
+  await iniciarCatalogo();
   enviarFormulario();
 }
 

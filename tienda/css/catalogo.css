@@ -43,7 +43,6 @@
 
 .catalogo-encabezado h2 {
   margin: 0;
-
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 400;
