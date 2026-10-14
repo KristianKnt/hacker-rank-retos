@@ -1,0 +1,82 @@
+/* FUENTE TEXTOS */
+
+.antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* FUENTE TITULOS */
+
+.kalam-light {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* COLOR DE FONDO*/
+
+body {
+    background-color: #F4F0E8;
+}
+
+#parrafo-detalle {
+    font-size: 20px;
+}
+
+#precio-detalle {
+    font-size: 30px;
+    color: #E45134;
+    font-size:xx-large;
+}
+
+
+#boton-agregar:hover {
+    background-color: #E45134;
+    border-color: #E45134;
+}
+
+#imagen-producto {
+    padding-top: 5%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#texto-detalle {
+    padding-top: 5%;
+}
+
+#accordionExample {
+    padding-top: 10%;
+}
+
+#flecha {
+    height: 10px;
+    width: 30px;
+    padding-left: 10px;
+}
+
+#container-principal {
+    border-color:#F4F0E8;
+}
+
+#aumento {
+    position:static;
+}
+
+#boton-agregar {
+    position: static;
+}
