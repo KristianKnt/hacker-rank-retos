@@ -1,3 +1,5 @@
+import { enviarFormulario } from './contact.js';
+
 async function loadComponent(containerId, filePath) {
     const container = document.getElementById(containerId);
 
@@ -25,10 +27,15 @@ async function initializeApp() {
         './components/header.html'
     );
 
+    await loadComponent('contact-container', 
+        './contactos/index.html'
+    );
+
     await loadComponent(
         'footer-container',
         './components/footer.html'
     );
+    enviarFormulario()
 }
 
 initializeApp();
