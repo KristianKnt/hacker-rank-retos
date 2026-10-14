@@ -69,25 +69,16 @@ El equipo está conformado por 4 o 5 participantes asignados de forma aleatoria.
 
 4. Ejecutar el archivo `index.html` en el navegador, preferiblemente utilizando la extensión Live Server.
 
-## aquitectura de las carpetas
+## Aquitectura de las carpetas
 tienda/
 │
 ├── index.html                      
 ├── catalogo/
 │   └── index.html                  
 ├── quienes-somos/
-│   └── index.html                  
-# Archivo principal
-# Datos de productos o funciones de API
-# Lógica del carrito
-# Funciones de renderizado
-# Imágenes de los productos
-# Página de inicio
-# Catálogo de productos
-# Información de la tienda
+│   └── index.html                 
 ├── contactanos/
 │   └── index.html                  
-# Formulario de contacto
 ├── carrito/
 │   └── index.html                  
 │
@@ -120,16 +111,7 @@ tienda/
 ├── producto2.jpg
 └── producto3.jpg
 └── README.md                       
-# Carrito de compras
-# Estilos globales
-# Controlador principal
-# Modelo del carrito
-# Funciones de renderizado
-# Datos de productos
-# Cliente HTTP
-# Servicio de productos
-# Servicio del carrito
-# Documentación del proyecto
+
 
 
 ## 📋 Criterios de evaluación
