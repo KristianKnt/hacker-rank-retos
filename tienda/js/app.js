@@ -1,7 +1,7 @@
 import { iniciarCatalogo } from "./catalogo.js";
 import { inicializarCarrito } from "./carrito.js";
 import { enviarFormulario } from './contact.js';
-
+import {activarNavegacion} from  './header.js';
 async function loadComponent(containerId, filePath) {
   const container = document.getElementById(containerId);
 
@@ -51,6 +51,7 @@ async function initializeApp() {
     "./quienes-somos/quienes-somos.html"
   );
 
+  activarNavegacion();
   iniciarCatalogo();
   inicializarCarrito();
   enviarFormulario()
