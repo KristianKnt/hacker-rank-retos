@@ -1,0 +1,91 @@
+# 🛍️ Landing Page Interactiva – Hackathon 1
+
+## 📌 Descripción del proyecto
+
+Desarrollo de una landing page interactiva para una tienda online, enfocada en presentar sus principales productos y servicios mediante una interfaz atractiva, intuitiva y dinámica.
+
+El proyecto busca mejorar la experiencia del usuario mediante animaciones, interacciones con el carrito de compras y almacenamiento local de los productos seleccionados.
+
+## 🎯 Misión
+
+Crear una landing page interactiva que permita explorar los productos y servicios de una tienda online de forma sencilla y atractiva, incorporando funcionalidades que mejoren la experiencia de compra.
+
+### Objetivos principales
+
+- Diseñar una interfaz visualmente atractiva y moderna.
+- Facilitar la navegación y exploración de los productos.
+- Implementar animaciones y transiciones con JavaScript.
+- Permitir agregar productos al carrito de compras.
+- Guardar los productos seleccionados en `LocalStorage` para conservarlos al recargar la página.
+- Aplicar buenas prácticas de estructura, diseño y programación web.
+
+## 🛠️ Tecnologías y herramientas
+
+| Tecnología             | Descripción                                                         |
+| ---------------------- | ------------------------------------------------------------------- |
+| **HTML5**              | Estructuración del contenido de la página web.                      |
+| **CSS3**               | Diseño visual, estilos, distribución y animaciones.                 |
+| **Bootstrap**          | Creación de interfaces responsivas y componentes visuales.          |
+| **JavaScript**         | Interactividad, animaciones y funcionalidad del carrito de compras. |
+| **LocalStorage**       | Almacenamiento local de los productos agregados al carrito.         |
+| **Visual Studio Code** | Entorno de desarrollo del proyecto.                                 |
+| **Git y GitHub**       | Control de versiones y publicación del código fuente.               |
+
+## ⚙️ Funcionalidades
+
+- 🛒 **Carrito de compras:** agregar y gestionar productos seleccionados.
+- 💾 **Persistencia de datos:** conservar el carrito mediante `LocalStorage`.
+- ✨ **Animaciones y transiciones:** mejorar la interacción con los elementos de la página.
+- 📱 **Diseño responsivo:** adaptar la interfaz a diferentes tamaños de pantalla.
+- 🧭 **Navegación intuitiva:** facilitar el acceso a las diferentes secciones de la tienda.
+
+## 👥 Equipo de desarrollo
+
+El equipo está conformado por 4 o 5 participantes asignados de forma aleatoria.
+
+| Integrante   | Rol         |
+| ------------ | ----------- |
+| Integrante 1 | Por definir |
+| Integrante 2 | Por definir |
+| Integrante 3 | Por definir |
+| Integrante 4 | Por definir |
+| Integrante 5 | Por definir |
+
+## 🚀 Instalación y ejecución
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/KristianKnt/hacker-rank-retos.git
+   ```
+
+2. Ingresar a la carpeta del proyecto:
+
+   ```bash
+   cd hacker-rank-retos
+   ```
+
+3. Abrir el proyecto en Visual Studio Code.
+
+4. Ejecutar el archivo `index.html` en el navegador, preferiblemente utilizando la extensión Live Server.
+
+## 📋 Criterios de evaluación
+
+El proyecto será evaluado teniendo en cuenta los siguientes aspectos:
+
+- Creatividad e innovación.
+- Funcionalidad de la aplicación.
+- Diseño y experiencia de usuario (UX/UI).
+- Estructura y organización del código HTML.
+- Calidad y mantenibilidad del código CSS.
+- Calidad y funcionalidad del código JavaScript.
+
+## 📦 Entrega del proyecto
+
+Al finalizar el Hackathon, el equipo deberá entregar el enlace del repositorio de GitHub a través de Canvas para su evaluación por parte del instructor.
+
+**Actividad:** [SA-HA1 – Entrega y Evaluación de Hackathon 1](https://generation.instructure.com/courses/4897/assignments/360073)
+
+---
+
+Desarrollado como parte del **Hackathon 1**, aplicando conocimientos de desarrollo web, diseño de interfaces e interactividad con JavaScript.
