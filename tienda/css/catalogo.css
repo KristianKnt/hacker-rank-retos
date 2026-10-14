@@ -1,0 +1,232 @@
+/* Seccion principal del catalogo */
+.catalogo {
+  width: 100%;
+  padding: 80px 24px;
+  background-color: #f8f7f4;
+  color: #292724;
+}
+
+.catalogo,
+.catalogo * {
+  box-sizing: border-box;
+}
+
+.catalogo-contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado de la seccion del catalogo */
+.catalogo-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #e7e4de;
+}
+
+.catalogo-subtitulo {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #c76a4c;
+}
+
+.catalogo-encabezado h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.catalogo-descripcion {
+  max-width: 320px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #77736f;
+}
+/* Botones */
+.catalogo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.catalogo .filtro {
+  padding: 9px 18px;
+  border: 1px solid #dedbd5;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #44403c;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.catalogo .filtro:hover {
+  border-color: #292724;
+}
+
+/* Categoría seleccionada */
+
+.catalogo .filtro.activo {
+  background-color: #292724;
+  color: #ffffff;
+  border-color: #292724;
+}
+
+/* Cuadricula de los productos */
+
+.catalogo-productos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 20px;
+}
+
+/* Tarjetas de productos */
+.catalogo .producto-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 12px;
+}
+
+.catalogo .producto-imagen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: #eeece8;
+  overflow: hidden;
+}
+
+.catalogo .producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto visual sobre la imagen */
+
+.catalogo .producto-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Informacion del producto */
+
+.catalogo .producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.catalogo .producto-categoria {
+  font-size: 11px;
+  color: #9b9690;
+}
+
+.catalogo .producto-titulo {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #292724;
+}
+
+.catalogo .producto-precio {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #292724;
+}
+
+/* Boton de agregar al carrito */
+
+.catalogo .producto-agregar {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #292724;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
+  z-index: 2;
+}
+
+.catalogo .producto-card:hover .producto-agregar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.catalogo .producto-agregar:hover {
+  background-color: #c76a4c;
+  color: #ffffff;
+}
+
+/* Celulares */
+
+@media (max-width: 576px) {
+  .catalogo {
+    padding: 40px 16px;
+  }
+
+  .catalogo-encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .catalogo-descripcion {
+    max-width: 100%;
+  }
+
+  .catalogo-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+
+  .catalogo .producto-imagen {
+    padding: 12px;
+  }
+
+  .catalogo .producto-titulo {
+    font-size: 12px;
+  }
+
+  .catalogo .filtro {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}

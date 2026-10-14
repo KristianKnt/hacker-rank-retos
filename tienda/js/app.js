@@ -1,50 +1,60 @@
+import { iniciarCatalogo } from "./catalogo.js";
 import { inicializarCarrito } from "./carrito.js";
 import { enviarFormulario } from './contact.js';
 import {activarNavegacion} from  './header.js';
 async function loadComponent(containerId, filePath) {
-    const container = document.getElementById(containerId);
+  const container = document.getElementById(containerId);
 
-    if (!container) {
-        return;
+  if (!container) {
+    return;
+  }
+
+  try {
+    const response = await fetch(filePath);
+
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status}`);
     }
 
-    try {
-        const response = await fetch(filePath);
-
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
-        }
-
-        container.innerHTML = await response.text();
-
-    } catch (error) {
-        console.error(`Error cargando ${filePath}:`, error);
-    }
+    container.innerHTML = await response.text();
+  } catch (error) {
+    console.error(`Error cargando ${filePath}:`, error);
+  }
 }
 
 async function initializeApp() {
-    await loadComponent(
-        'header-container',
-        './components/header.html'
-    );
 
-    activarNavegacion();
-    await loadComponent('contact-container',
-        './contactos/index.html'
-    );
+  await loadComponent(
+    'header-container',
+    './components/header.html'
+  );
 
-    await loadComponent(
-        'footer-container',
-        './components/footer.html'
-    );
+  await loadComponent('contact-container',
+    './contactos/index.html'
+  );
+  await loadComponent(
+    "catalogo-container",
+    "./catalogo/catalogo.html");
 
-    await loadComponent(
-        "panel-lateral-carrito",
-        "./carrito/index.html"
-    );
+  await loadComponent(
+    'footer-container',
+    './components/footer.html'
+  );
 
-    inicializarCarrito();
-    enviarFormulario()
+  await loadComponent(
+    "panel-lateral-carrito",
+    "./carrito/index.html"
+  );
+
+  await loadComponent(
+    "div-quienes",
+    "./quienes-somos/quienes-somos.html"
+  );
+
+  activarNavegacion();
+  iniciarCatalogo();
+  inicializarCarrito();
+  enviarFormulario()
 }
 
 initializeApp();
